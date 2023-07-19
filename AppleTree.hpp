@@ -1,4 +1,4 @@
-#ifndef APPLE_TREE_HPP
+п»ї#ifndef APPLE_TREE_HPP
 #define APPLE_TREE_HPP
 
 #include <iostream>
@@ -8,10 +8,10 @@
 #include "Plants.hpp"
 #include "Apple.hpp"
 
-// Пример конкретной реализации класса Растения - "Яблоня"
+// РџСЂРёРјРµСЂ РєРѕРЅРєСЂРµС‚РЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РєР»Р°СЃСЃР° Р Р°СЃС‚РµРЅРёСЏ - "РЇР±Р»РѕРЅСЏ"
 class AppleTree : public Plants {
 private:
-    int fruitCount_; // Количество плодов на яблоне
+    int fruitCount_; // РљРѕР»РёС‡РµСЃС‚РІРѕ РїР»РѕРґРѕРІ РЅР° СЏР±Р»РѕРЅРµ
 
 public:
     AppleTree(const std::string& color, const std::string& size, const std::string& name, int fruitCount)
@@ -32,7 +32,7 @@ public:
 
     std::unique_ptr<Harvest> harvestFruit() override {
         --fruitCount_;
-        return std::make_unique<Harvest>("Apple", "Red", "Medium", GetRandom()); // Возвращение объекта Apple через фабричный метод
+        return std::make_unique<Harvest>("Apple", "Red", "Medium", GetRandom()); // Р’РѕР·РІСЂР°С‰РµРЅРёРµ РѕР±СЉРµРєС‚Р° Apple С‡РµСЂРµР· С„Р°Р±СЂРёС‡РЅС‹Р№ РјРµС‚РѕРґ
     }
 
     int GetFruitCount() override

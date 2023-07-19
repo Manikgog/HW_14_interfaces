@@ -1,10 +1,10 @@
-#ifndef HARVESR_HPP
+п»ї#ifndef HARVESR_HPP
 #define HARVESR_HPP
 
 #include <string>
 #include <iostream>
 
-// Ѕазовый класс ѕлоды
+// Р…Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ С•Р»РѕРґС‹
 class Harvest {
 public:
     Harvest() : name_(""), color_(""), size_(""), weight_(0) {}

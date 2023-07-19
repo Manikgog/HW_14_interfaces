@@ -1,4 +1,4 @@
-#ifndef _PEACH_TREE_HPP_
+п»ї#ifndef _PEACH_TREE_HPP_
 #define _PEACH_TREE_HPP_
 
 #include <iostream>
@@ -11,7 +11,7 @@
 
 class PeachTree : public Plants {
 private:
-    int fruitCount_; // Количество плодов на персиковом дереве
+    int fruitCount_; // РљРѕР»РёС‡РµСЃС‚РІРѕ РїР»РѕРґРѕРІ РЅР° РїРµСЂСЃРёРєРѕРІРѕРј РґРµСЂРµРІРµ
 
 public:
     PeachTree(const std::string& color, const std::string& size, const std::string& name, int fruitCount)
@@ -32,7 +32,7 @@ public:
 
     std::unique_ptr<Harvest> harvestFruit() override {
         --fruitCount_;
-        return std::make_unique<Harvest>("Peach Prince", "Yellow", "Large", GetRandom()); // Возвращение объекта Peach через фабричный метод
+        return std::make_unique<Harvest>("Peach Prince", "Yellow", "Large", GetRandom()); // Р’РѕР·РІСЂР°С‰РµРЅРёРµ РѕР±СЉРµРєС‚Р° Peach С‡РµСЂРµР· С„Р°Р±СЂРёС‡РЅС‹Р№ РјРµС‚РѕРґ
     }
 
     int GetFruitCount() override

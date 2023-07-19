@@ -1,11 +1,11 @@
-#ifndef PLANTS_HPP
+п»ї#ifndef PLANTS_HPP
 #define PLANTS_HPP
 
 #include <string>
 #include <iostream>
 #include "Harvest.hpp"
 
-// Базовый класс Растения
+// Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ Р Р°СЃС‚РµРЅРёСЏ
 class Plants {
 public:
     Plants(const std::string& name, const std::string& size, const std::string& color)
@@ -19,7 +19,7 @@ public:
         std::cout << "Size: " << size_ << std::endl;
     }
 
-    virtual std::unique_ptr<Harvest> harvestFruit() = 0; // Возвращение объекта плода через фабричный метод
+    virtual std::unique_ptr<Harvest> harvestFruit() = 0; // Р’РѕР·РІСЂР°С‰РµРЅРёРµ РѕР±СЉРµРєС‚Р° РїР»РѕРґР° С‡РµСЂРµР· С„Р°Р±СЂРёС‡РЅС‹Р№ РјРµС‚РѕРґ
 
     virtual int GetFruitCount() = 0;
 

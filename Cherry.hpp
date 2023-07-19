@@ -1,4 +1,4 @@
-#ifndef _CHERRY_HPP_
+﻿#ifndef _CHERRY_HPP_
 #define _CHERRY_HPP_
 
 #include "Harvest.hpp"
