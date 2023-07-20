@@ -1,11 +1,14 @@
-#ifndef APPLE_HPP
+п»ї#ifndef APPLE_HPP
 #define APPLE_HPP
 
 #include <string>
 
 #include "Harvest.hpp"
 
-// Пример конкретной реализации класса Плоды - "Яблоко"
+
+/*!
+\brief РџСЂРёРјРµСЂ РєРѕРЅРєСЂРµС‚РЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РєР»Р°СЃСЃР° РџР»РѕРґС‹ - "РЇР±Р»РѕРєРѕ"
+*/
 class Apple : public Harvest {
 public:
     Apple(const std::string& name = "Apple", const std::string& color = "Red", const std::string& size = "Small", double weight = 0.1)

@@ -1,0 +1,50 @@
+\doxysection{Cherry\+Tree.\+hpp}
+\hypertarget{_cherry_tree_8hpp_source}{}\label{_cherry_tree_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_CHERRY\_TREE\_HPP\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_CHERRY\_TREE\_HPP\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}Plants.hpp"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Cherry.hpp"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_cherry_tree}{CherryTree}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_plants}{Plants}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ fruitCount\_;\ \textcolor{comment}{//\ Количество\ плодов\ на\ вишнёвого\ дереве}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_cherry_tree}{CherryTree}}(\textcolor{keyword}{const}\ std::string\&\ color,\ \textcolor{keyword}{const}\ std::string\&\ size,\ \textcolor{keyword}{const}\ std::string\&\ name,\ \textcolor{keywordtype}{int}\ fruitCount)}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_plants}{Plants}}(color,\ size,\ name),\ fruitCount\_(fruitCount)\ \{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ printInfo()\textcolor{keyword}{\ const\ override\ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ Plants::printInfo();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Fruit\ count:\ "{}}\ <<\ fruitCount\_\ <<\ std::endl;}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_cherry_tree_a942d4a80a0937219cf5904b458d19a55}{GetRandom}}()}
+\DoxyCodeLine{00031\ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ std::random\_device\ rd;\ \ \ \textcolor{comment}{//\ non-\/deterministic\ generator}}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ std::mt19937\ gen(rd());\ \ \textcolor{comment}{//\ to\ seed\ mersenne\ twister.}}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ randomNum\ =\ gen()\ \%\ 21\ +\ 10;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ randomNum\ /\ 1000.0;}
+\DoxyCodeLine{00036\ \ \ \ \ \}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ std::unique\_ptr<Harvest>\ \mbox{\hyperlink{class_cherry_tree_a948a5986be36a836187c342b915aeef0}{harvestFruit}}()\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ -\/-\/fruitCount\_;}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ std::make\_unique<Harvest>(\textcolor{stringliteral}{"{}Cherry"{}},\ \textcolor{stringliteral}{"{}Red"{}},\ \textcolor{stringliteral}{"{}Large"{}},\ \mbox{\hyperlink{class_cherry_tree_a942d4a80a0937219cf5904b458d19a55}{GetRandom}}());\ \textcolor{comment}{//\ Возвращение\ объекта\ Cherry\ через\ фабричный\ метод}}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_cherry_tree_a49afa24b5506da6e89b308b2ef452c67}{GetFruitCount}}()\textcolor{keyword}{\ override}}
+\DoxyCodeLine{00051\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ fruitCount\_;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00058\ }
+
+\end{DoxyCode}

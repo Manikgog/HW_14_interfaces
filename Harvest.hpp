@@ -4,7 +4,9 @@
 #include <string>
 #include <iostream>
 
-// Ѕазовый класс ѕлоды
+/*!
+\brief базовый класс Harvest (плоды)
+*/
 class Harvest {
 public:
     Harvest() : name_(""), color_(""), size_(""), weight_(0) {}

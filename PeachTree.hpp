@@ -9,6 +9,9 @@
 #include "Plants.hpp"
 #include "Peach.hpp"
 
+/*!
+\brief Пример конкретной реализации класса Растения - "Персиковое дерево"
+*/
 class PeachTree : public Plants {
 private:
     int fruitCount_; // Количество плодов на персиковом дереве
@@ -22,6 +25,9 @@ public:
         std::cout << "Fruit count: " << fruitCount_ << std::endl;
     }
 
+    /*!
+    \brief метод возвращающий случайное число от 0.3 до 0.4 (случайный вес персика)
+    */
     double GetRandom()
     {
         std::random_device rd;   // non-deterministic generator
@@ -30,11 +36,18 @@ public:
         return randomNum / 100.0;
     }
 
+    /*!
+   \brief метод возвращающий умный указатель на объект класса Harvest, уменьшающий на единицу количество плодов на дереве
+   \param[out] std::unique_ptr<Harvest> умный указатель на объект класса Harvest
+   */
     std::unique_ptr<Harvest> harvestFruit() override {
         --fruitCount_;
         return std::make_unique<Harvest>("Peach Prince", "Yellow", "Large", GetRandom()); // Возвращение объекта Peach через фабричный метод
     }
 
+    /*!
+    \brief метод возвращающий количество плодов на дереве
+    */
     int GetFruitCount() override
     {
         return fruitCount_;

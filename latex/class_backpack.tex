@@ -1,0 +1,143 @@
+\doxysection{Backpack Class Reference}
+\hypertarget{class_backpack}{}\label{class_backpack}\index{Backpack@{Backpack}}
+
+
+класс \doxylink{class_backpack}{Backpack} (рюкзак)  
+
+
+
+
+{\ttfamily \#include $<$Backpack.\+hpp$>$}
+
+Inheritance diagram for Backpack\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_backpack}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_backpack_a6ba6fedffcab89165a2b0442c3930938}{Push\+\_\+back}} (const \mbox{\hyperlink{class_harvest}{Harvest}} \&harvest)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_backpack_aa5e14f1dc9bfd63b213583e65fbc4133}{Size}} ()
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_harvest}{Harvest}} $>$ \mbox{\hyperlink{class_backpack_a0f6c29d077841606848e5cb85b0a2282}{Get\+Fruit}} (const std\+::string \&fruit)
+\begin{DoxyCompactList}\small\item\em метод возвращающий умный указатель на объект класса \doxylink{class_harvest}{Harvest} \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_backpack_ad5efba179c08e6918b8d1f8f8b56f6f9}{Get\+Weight}} ()
+\begin{DoxyCompactList}\small\item\em метод возвращающий полный вес плодов в рюкзаке \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_harvest}{Harvest}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_backpack_a202eac195a596ea5b2158e0a0b81bfca}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em метод для просмотра плодов в рюкзаке param\mbox{[}in\mbox{]} index индекс плода в векторе backpack\+\_\+ param\mbox{[}out\mbox{]} указатель на объект класса \doxylink{class_harvest}{Harvest} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_backpack_a53785579a71da894962c171abaa7d89f}{Show\+Statistic}} ()
+\begin{DoxyCompactList}\small\item\em метод для просмотра статистики плодов Выводит названия плодов и их количество по названиям. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_harvest}{Harvest}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_game_back_pack_a2e362890a11934fa0539012720c78b64}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)=0
+\item 
+\Hypertarget{class_i_game_back_pack_a50f3e9cfc6cac244b255891ef7f94c57}\label{class_i_game_back_pack_a50f3e9cfc6cac244b255891ef7f94c57} 
+virtual size\+\_\+t {\bfseries Size} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_i_game_back_pack_a259d8eb1edf5f21a1a6ff0997ae6a927}{Show\+Statistic}} ()=0
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_player_back_pack_a3583e097cbb6c5649d972056fd3f0027}\label{class_i_player_back_pack_a3583e097cbb6c5649d972056fd3f0027} 
+virtual void {\bfseries Push\+\_\+back} (const \mbox{\hyperlink{class_harvest}{Harvest}} \&harvest)=0
+\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_harvest}{Harvest}} $>$ \mbox{\hyperlink{class_i_player_back_pack_a3d45859ff9b6ea516873b69f368dac97}{Get\+Fruit}} (const std\+::string \&fruit)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+класс \doxylink{class_backpack}{Backpack} (рюкзак) 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_backpack_a0f6c29d077841606848e5cb85b0a2282}\label{class_backpack_a0f6c29d077841606848e5cb85b0a2282} 
+\index{Backpack@{Backpack}!GetFruit@{GetFruit}}
+\index{GetFruit@{GetFruit}!Backpack@{Backpack}}
+\doxysubsubsection{\texorpdfstring{GetFruit()}{GetFruit()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_harvest}{Harvest}} $>$ Backpack\+::\+Get\+Fruit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{fruit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+метод возвращающий умный указатель на объект класса \doxylink{class_harvest}{Harvest} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fruit} & строку названия плода \\
+\hline
+\mbox{\texttt{ out}}  & {\em std\+::unique\+\_\+ptr$<$\+Harvest$>$} & умный указатель на объект класса \doxylink{class_harvest}{Harvest} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_player_back_pack}{IPlayer\+Back\+Pack}}.
+
+\Hypertarget{class_backpack_ad5efba179c08e6918b8d1f8f8b56f6f9}\label{class_backpack_ad5efba179c08e6918b8d1f8f8b56f6f9} 
+\index{Backpack@{Backpack}!GetWeight@{GetWeight}}
+\index{GetWeight@{GetWeight}!Backpack@{Backpack}}
+\doxysubsubsection{\texorpdfstring{GetWeight()}{GetWeight()}}
+{\footnotesize\ttfamily double Backpack\+::\+Get\+Weight (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+метод возвращающий полный вес плодов в рюкзаке 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em вещественное} & число, выражающее вес содержимого рюкзака \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_backpack_a202eac195a596ea5b2158e0a0b81bfca}\label{class_backpack_a202eac195a596ea5b2158e0a0b81bfca} 
+\index{Backpack@{Backpack}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Backpack@{Backpack}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_harvest}{Harvest}} \texorpdfstring{$\ast$}{*} Backpack\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+метод для просмотра плодов в рюкзаке param\mbox{[}in\mbox{]} index индекс плода в векторе backpack\+\_\+ param\mbox{[}out\mbox{]} указатель на объект класса \doxylink{class_harvest}{Harvest} 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_back_pack}{IGame\+Back\+Pack}}.
+
+\Hypertarget{class_backpack_a6ba6fedffcab89165a2b0442c3930938}\label{class_backpack_a6ba6fedffcab89165a2b0442c3930938} 
+\index{Backpack@{Backpack}!Push\_back@{Push\_back}}
+\index{Push\_back@{Push\_back}!Backpack@{Backpack}}
+\doxysubsubsection{\texorpdfstring{Push\_back()}{Push\_back()}}
+{\footnotesize\ttfamily void Backpack\+::\+Push\+\_\+back (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_harvest}{Harvest}} \&}]{harvest }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_player_back_pack}{IPlayer\+Back\+Pack}}.
+
+\Hypertarget{class_backpack_a53785579a71da894962c171abaa7d89f}\label{class_backpack_a53785579a71da894962c171abaa7d89f} 
+\index{Backpack@{Backpack}!ShowStatistic@{ShowStatistic}}
+\index{ShowStatistic@{ShowStatistic}!Backpack@{Backpack}}
+\doxysubsubsection{\texorpdfstring{ShowStatistic()}{ShowStatistic()}}
+{\footnotesize\ttfamily void Backpack\+::\+Show\+Statistic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+метод для просмотра статистики плодов Выводит названия плодов и их количество по названиям. 
+
+
+
+Implements \mbox{\hyperlink{class_i_game_back_pack}{IGame\+Back\+Pack}}.
+
+\Hypertarget{class_backpack_aa5e14f1dc9bfd63b213583e65fbc4133}\label{class_backpack_aa5e14f1dc9bfd63b213583e65fbc4133} 
+\index{Backpack@{Backpack}!Size@{Size}}
+\index{Size@{Size}!Backpack@{Backpack}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily size\+\_\+t Backpack\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_game_back_pack}{IGame\+Back\+Pack}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Backpack.\+hpp\end{DoxyCompactItemize}

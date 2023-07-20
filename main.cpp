@@ -51,6 +51,15 @@ int main() {
 
     Harvest h = garden.GetHarvest("Apple Tree");
 
+    Harvest* p_h = backpack[0];
+
+    backpack.ShowStatistic();
+
+    
+    backpack.Push_back(Harvest("Apple", "Red", "Medium", 0.2));
+    std::unique_ptr<Harvest> p_apple = backpack.GetFruit("Apple");
+
+    garden.ShowStatistic();
     return 0;
 }
 

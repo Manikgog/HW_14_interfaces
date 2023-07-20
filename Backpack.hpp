@@ -3,10 +3,14 @@
 
 #include <vector>
 #include <memory>
+#include <set>
 
 #include "Harvest.hpp"
 
-class Backpack
+/*!
+\brief класс Backpack (рюкзак) 
+*/
+class Backpack : virtual public IGameBackPack, virtual public IPlayerBackPack
 {
 private:
 	std::vector<std::unique_ptr<Harvest>> backpack_;
@@ -24,6 +28,11 @@ public:
 		return backpack_.size();
 	}
 
+	/*!
+	\brief метод возвращающий умный указатель на объект класса Harvest
+	\param[in] fruit строку названия плода
+	\param[out] std::unique_ptr<Harvest> умный указатель на объект класса Harvest
+	*/
 	std::unique_ptr<Harvest> GetFruit(const std::string& fruit)
 	{
 		if (this->Size() == 0)
@@ -44,6 +53,10 @@ public:
 		return std::make_unique<Harvest>();
 	}
 
+	/*!
+	\brief метод возвращающий полный вес плодов в рюкзаке
+	\param[out] вещественное число, выражающее вес содержимого рюкзака
+	*/
 	double GetWeight()
 	{
 		double weight = 0;
@@ -53,6 +66,47 @@ public:
 		}
 		return weight;
 	}
+
+	/*!
+	\brief метод для просмотра плодов в рюкзаке
+	param[in] index индекс плода в векторе backpack_
+	param[out] указатель на объект класса Harvest
+	*/
+	Harvest* operator[](size_t index)
+	{
+		if (index < 0 || index >= backpack_.size())
+			return nullptr;
+		return backpack_.at(index).get();
+	}
+
+	/*!
+	\brief метод для просмотра статистики плодов
+	Выводит названия плодов и их количество по названиям.
+	*/
+	void ShowStatistic()
+	{
+		std::set <std::string> NamesOfHarvest;
+		for (const auto& el : backpack_)
+		{
+			NamesOfHarvest.insert(el->getName());
+		}
+
+
+		std::cout << "The backpack contains:\n";
+		for (const auto& el : NamesOfHarvest)
+		{
+			std::cout << el << " - ";
+			size_t count = 0;
+			for (const auto& el1 : backpack_)
+			{
+				if (el1.get()->getName() == el)
+					count++;
+			}
+			std::cout << count << " pieces.\n";
+		}
+	}
+
+	
 
 };
 

@@ -8,29 +8,28 @@
 Garden::Garden()
 {
 	std::random_device rd;   // non-deterministic generator
-	std::mt19937 gen(rd());  // to seed mersenne twister.
 
-	int AllTress = gen() % 71 + 30;;
-	int numberOfAppleTrees = gen() % 30 + 10;
-	int numberOfPeachTrees = gen() % 30 + 10;
+	int AllTress = rd() % 71 + 30;;
+	int numberOfAppleTrees = rd() % 30 + 10;
+	int numberOfPeachTrees = rd() % 30 + 10;
 	int numberOfCherryTrees = AllTress - numberOfAppleTrees - numberOfPeachTrees;
 
 	int fruitCount = 0;
 	while (numberOfAppleTrees-- > 0)
 	{
-		fruitCount = gen() % 11 + 5;
+		fruitCount = rd() % 11 + 5;
 		Garden_.push_back(std::make_unique<AppleTree>("Green", "Large", "Apple Tree", fruitCount));
 	}
 
 	while (numberOfPeachTrees-- > 0)
 	{
-		fruitCount = gen() % 16 + 10;
+		fruitCount = rd() % 16 + 10;
 		Garden_.push_back(std::make_unique<PeachTree>("Green", "Medium", "Peach Tree", fruitCount));
 	}
 
 	while (numberOfCherryTrees-- > 0)
 	{
-		fruitCount = gen() % 51 + 10;
+		fruitCount = rd() % 51 + 10;
 		Garden_.push_back(std::make_unique<CherryTree>("Dark green", "Medium", "Cherry Tree", fruitCount));
 	}
 }
@@ -156,5 +155,28 @@ Harvest Garden::GetHarvest(const std::string& nameTree)
 	}
 	Harvest h;
 	return h;
+}
+
+void Garden::ShowStatistic()
+{
+	std::set <std::string> NamesOfTrees;
+	for (const auto& el : Garden_)
+	{
+		NamesOfTrees.insert(el->GetName());
+	}
+
+
+	std::cout << "In the garden grawing:\n";
+	for (const auto& el : NamesOfTrees)
+	{
+		std::cout << el << " - ";
+		size_t count = 0;
+		for (const auto& el1 : Garden_)
+		{
+			if (el1->GetName() == el)
+				count++;
+		}
+		std::cout << count << " units.\n";
+	}
 }
 

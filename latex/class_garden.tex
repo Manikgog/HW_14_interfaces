@@ -1,0 +1,195 @@
+\doxysection{Garden Class Reference}
+\hypertarget{class_garden}{}\label{class_garden}\index{Garden@{Garden}}
+
+
+класс \doxylink{class_garden}{Garden}  
+
+
+
+
+{\ttfamily \#include $<$Garden.\+hpp$>$}
+
+Inheritance diagram for Garden\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_garden}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_garden_a151f8f6571518ad812fb66307cae270d}\label{class_garden_a151f8f6571518ad812fb66307cae270d} 
+{\bfseries Garden} ()
+\begin{DoxyCompactList}\small\item\em конструктор от 30 до 100 объектов \doxylink{class_plants}{Plants} и заполняющий ими вектор std\+::vector$<$std\+::unique\+\_\+ptr$<$\+Plants$>$$>$ Garden\+\_\+; Количество деревьев по видам заполняется случайным образом. Количество фруктов на каждом дереве заполняется тоже случайно. \end{DoxyCompactList}\item 
+\Hypertarget{class_garden_a1aa4b1e63db6d953beab562387e53325}\label{class_garden_a1aa4b1e63db6d953beab562387e53325} 
+void {\bfseries Print\+Garden} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{class_garden_a9e64fc6f5ca0c5da3586605b318023f4}{Size}} ()
+\begin{DoxyCompactList}\small\item\em метод возвращающий количество элементов в векторе std\+::vector$<$std\+::unique\+\_\+ptr$<$\+Plants$>$$>$ Garden\+\_\+. Возвращает количество деревьев в саду. \end{DoxyCompactList}\item 
+\Hypertarget{class_garden_a820aa233a6c3ecf6937169eccb8265b6}\label{class_garden_a820aa233a6c3ecf6937169eccb8265b6} 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_plants}{Plants}} $>$ $>$ \& {\bfseries Get\+Garden} ()
+\item 
+\mbox{\hyperlink{class_plants}{Plants}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_garden_a89554839339d4c8d688afe19511873a2}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index) override
+\begin{DoxyCompactList}\small\item\em метод возвращает указатель на объект класса \doxylink{class_plants}{Plants} \end{DoxyCompactList}\item 
+\Hypertarget{class_garden_a3b2001cc56dbdd132b94463af7eae8e2}\label{class_garden_a3b2001cc56dbdd132b94463af7eae8e2} 
+size\+\_\+t {\bfseries Amount\+Of\+Harvest} ()
+\begin{DoxyCompactList}\small\item\em метод возвращает количество плодов в саду \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_garden_af6277e3418aa10e89aa7225933573cdc}{Add\+Apple\+Tree}} () override
+\item 
+void \mbox{\hyperlink{class_garden_a89b16c37261f82ef743dfbaad7bc13cb}{Add\+Peach\+Tree}} () override
+\item 
+void \mbox{\hyperlink{class_garden_a7e857f8d46775d6f3b4cb06f526de5c0}{Add\+Cherry\+Tree}} () override
+\item 
+void \mbox{\hyperlink{class_garden_aedba2b5e7cecad851fa354aff3f0dfc1}{Add\+Random\+Tree}} () override
+\item 
+void \mbox{\hyperlink{class_garden_a8434d4ec25aaa90a3f2aa68ad24c4c3a}{Delete\+Tree}} (std\+::string name\+Tree) override
+\item 
+\mbox{\hyperlink{class_harvest}{Harvest}} \mbox{\hyperlink{class_garden_a2a0d5ded444faa54bab673d7ba6965de}{Get\+Harvest}} (const std\+::string \&name\+Of\+Tree) override
+\item 
+void \mbox{\hyperlink{class_garden_af1e7c4aba35f788bbdad803b612d7786}{Show\+Statistic}} () override
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_i_game_garden_afdea2edbb3cbdd20d21c0df9458e64ce}\label{class_i_game_garden_afdea2edbb3cbdd20d21c0df9458e64ce} 
+virtual void {\bfseries Add\+Apple\+Tree} ()=0
+\item 
+\Hypertarget{class_i_game_garden_ab3f4fe0ebf9fd5d6b5d797f3df0718e4}\label{class_i_game_garden_ab3f4fe0ebf9fd5d6b5d797f3df0718e4} 
+virtual void {\bfseries Add\+Peach\+Tree} ()=0
+\item 
+\Hypertarget{class_i_game_garden_a5d29e85374c08c6e8aa5465124535e40}\label{class_i_game_garden_a5d29e85374c08c6e8aa5465124535e40} 
+virtual void {\bfseries Add\+Cherry\+Tree} ()=0
+\item 
+\Hypertarget{class_i_game_garden_ab9a6b92680ffb6db1074b6a61833701f}\label{class_i_game_garden_ab9a6b92680ffb6db1074b6a61833701f} 
+virtual void {\bfseries Add\+Random\+Tree} ()=0
+\item 
+\Hypertarget{class_i_game_garden_ab431670f72162203ef57c95a5cf89df8}\label{class_i_game_garden_ab431670f72162203ef57c95a5cf89df8} 
+virtual void {\bfseries Delete\+Tree} (std\+::string name\+Tree)=0
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_plants}{Plants}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_i_player_garden_a19747d874afa592d4760abc52387e6b7}{operator\mbox{[}$\,$\mbox{]}}} (size\+\_\+t index)=0
+\item 
+\Hypertarget{class_i_player_garden_af8213a3a0cc6538a2407510d2addd4d1}\label{class_i_player_garden_af8213a3a0cc6538a2407510d2addd4d1} 
+virtual \mbox{\hyperlink{class_harvest}{Harvest}} {\bfseries Get\+Harvest} (const std\+::string \&name\+Of\+Tree)=0
+\item 
+\Hypertarget{class_i_player_garden_a442810197a02752207fa5492e56cfcb2}\label{class_i_player_garden_a442810197a02752207fa5492e56cfcb2} 
+virtual void {\bfseries Show\+Statistic} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+класс \doxylink{class_garden}{Garden} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_garden_af6277e3418aa10e89aa7225933573cdc}\label{class_garden_af6277e3418aa10e89aa7225933573cdc} 
+\index{Garden@{Garden}!AddAppleTree@{AddAppleTree}}
+\index{AddAppleTree@{AddAppleTree}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{AddAppleTree()}{AddAppleTree()}}
+{\footnotesize\ttfamily void Garden\+::\+Add\+Apple\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_game_garden}{IGame\+Garden}}.
+
+\Hypertarget{class_garden_a7e857f8d46775d6f3b4cb06f526de5c0}\label{class_garden_a7e857f8d46775d6f3b4cb06f526de5c0} 
+\index{Garden@{Garden}!AddCherryTree@{AddCherryTree}}
+\index{AddCherryTree@{AddCherryTree}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{AddCherryTree()}{AddCherryTree()}}
+{\footnotesize\ttfamily void Garden\+::\+Add\+Cherry\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_game_garden}{IGame\+Garden}}.
+
+\Hypertarget{class_garden_a89b16c37261f82ef743dfbaad7bc13cb}\label{class_garden_a89b16c37261f82ef743dfbaad7bc13cb} 
+\index{Garden@{Garden}!AddPeachTree@{AddPeachTree}}
+\index{AddPeachTree@{AddPeachTree}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{AddPeachTree()}{AddPeachTree()}}
+{\footnotesize\ttfamily void Garden\+::\+Add\+Peach\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_game_garden}{IGame\+Garden}}.
+
+\Hypertarget{class_garden_aedba2b5e7cecad851fa354aff3f0dfc1}\label{class_garden_aedba2b5e7cecad851fa354aff3f0dfc1} 
+\index{Garden@{Garden}!AddRandomTree@{AddRandomTree}}
+\index{AddRandomTree@{AddRandomTree}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{AddRandomTree()}{AddRandomTree()}}
+{\footnotesize\ttfamily void Garden\+::\+Add\+Random\+Tree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_game_garden}{IGame\+Garden}}.
+
+\Hypertarget{class_garden_a8434d4ec25aaa90a3f2aa68ad24c4c3a}\label{class_garden_a8434d4ec25aaa90a3f2aa68ad24c4c3a} 
+\index{Garden@{Garden}!DeleteTree@{DeleteTree}}
+\index{DeleteTree@{DeleteTree}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{DeleteTree()}{DeleteTree()}}
+{\footnotesize\ttfamily void Garden\+::\+Delete\+Tree (\begin{DoxyParamCaption}\item[{std\+::string}]{name\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_game_garden}{IGame\+Garden}}.
+
+\Hypertarget{class_garden_a2a0d5ded444faa54bab673d7ba6965de}\label{class_garden_a2a0d5ded444faa54bab673d7ba6965de} 
+\index{Garden@{Garden}!GetHarvest@{GetHarvest}}
+\index{GetHarvest@{GetHarvest}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{GetHarvest()}{GetHarvest()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_harvest}{Harvest}} Garden\+::\+Get\+Harvest (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name\+Of\+Tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_player_garden}{IPlayer\+Garden}}.
+
+\Hypertarget{class_garden_a89554839339d4c8d688afe19511873a2}\label{class_garden_a89554839339d4c8d688afe19511873a2} 
+\index{Garden@{Garden}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_plants}{Plants}} \texorpdfstring{$\ast$}{*} Garden\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+метод возвращает указатель на объект класса \doxylink{class_plants}{Plants} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & индекс объекта класса \doxylink{class_plants}{Plants} в векторе std\+::vector$<$std\+::unique\+\_\+ptr$<$\+Plants$>$$>$ Garden\+\_\+; \\
+\hline
+\mbox{\texttt{ out}}  & {\em Plants\texorpdfstring{$\ast$}{*}} & указатель на объект \doxylink{class_plants}{Plants} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_player_garden}{IPlayer\+Garden}}.
+
+\Hypertarget{class_garden_af1e7c4aba35f788bbdad803b612d7786}\label{class_garden_af1e7c4aba35f788bbdad803b612d7786} 
+\index{Garden@{Garden}!ShowStatistic@{ShowStatistic}}
+\index{ShowStatistic@{ShowStatistic}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{ShowStatistic()}{ShowStatistic()}}
+{\footnotesize\ttfamily void Garden\+::\+Show\+Statistic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_i_player_garden}{IPlayer\+Garden}}.
+
+\Hypertarget{class_garden_a9e64fc6f5ca0c5da3586605b318023f4}\label{class_garden_a9e64fc6f5ca0c5da3586605b318023f4} 
+\index{Garden@{Garden}!Size@{Size}}
+\index{Size@{Size}!Garden@{Garden}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily size\+\_\+t Garden\+::\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+метод возвращающий количество элементов в векторе std\+::vector$<$std\+::unique\+\_\+ptr$<$\+Plants$>$$>$ Garden\+\_\+. Возвращает количество деревьев в саду. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em size\+\_\+t} & количество деревьев \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Garden.\+hpp\item 
+Garden.\+cpp\end{DoxyCompactItemize}

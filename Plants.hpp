@@ -5,7 +5,9 @@
 #include <iostream>
 #include "Harvest.hpp"
 
-// Базовый класс Растения
+/*!
+\brief базовый класс Plants
+*/
 class Plants {
 public:
     Plants(const std::string& name, const std::string& size, const std::string& color)

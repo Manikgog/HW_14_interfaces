@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include <random>
+#include <set>
 
 #include "Plants.hpp"
 #include "AppleTree.hpp"
@@ -11,7 +12,10 @@
 #include "CherryTree.hpp"
 #include "Interfaces.h"
 
-class Garden : public IGameGarden, public IGamerGarden
+/*!
+\brief класс Garden
+*/
+class Garden : virtual public IGameGarden, virtual public IPlayerGarden
 {
 private:
 	std::vector<std::unique_ptr<Plants>> Garden_;
@@ -24,7 +28,7 @@ public:
 	size_t Size();
 
 
-	std::vector<std::unique_ptr<Plants>>& GetGarden() override;
+	std::vector<std::unique_ptr<Plants>>& GetGarden();
 
 	Plants* operator[](size_t index)override;
 
@@ -41,6 +45,8 @@ public:
 	void  DeleteTree(std::string nameTree)override;
 
 	Harvest GetHarvest(const std::string& nameOfTree) override;
+
+	void ShowStatistic() override;
 };
 
 

@@ -1,0 +1,63 @@
+\doxysection{Interfaces.\+h}
+\hypertarget{_interfaces_8h_source}{}\label{_interfaces_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_INTERFACES\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_INTERFACES\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Harvest.hpp"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_game}{IGame}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_i_game}{IGame}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_game}{\string~IGame}}()\ \{\}}
+\DoxyCodeLine{00012\ \};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_game_garden}{IGameGarden}}\ :\ \mbox{\hyperlink{class_i_game}{IGame}}}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_i_game_garden}{IGameGarden}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_game_garden}{\string~IGameGarden}}()\ \{\}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddAppleTree()\ =\ 0;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddPeachTree()\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddCherryTree()\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ AddRandomTree()\ =\ 0;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \ DeleteTree(std::string\ nameTree)\ =\ 0;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_game_back_pack}{IGameBackPack}}\ :\ \mbox{\hyperlink{class_i_game}{IGame}}}
+\DoxyCodeLine{00034\ \{}
+\DoxyCodeLine{00035\ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_i_game_back_pack}{IGameBackPack}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_i_game_back_pack}{\string~IGameBackPack}}()\ \{\}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_harvest}{Harvest}}*\ operator[](\textcolor{keywordtype}{size\_t}\ index)\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//>\ метод\ для\ просмотра\ плодов\ в\ рюкзаке}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{size\_t}\ Size()\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//>\ метод\ возвращающий\ количество\ плодов\ в\ рюкзаке}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ShowStatistic()\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//>\ метод\ выводящий\ на\ экран\ статистику\ по\ содержимому\ рюкзака}}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_player_back_pack}{IPlayerBackPack}}\ :\ \mbox{\hyperlink{class_i_game}{IGame}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_i_player_back_pack}{IPlayerBackPack}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_i_player_back_pack}{\string~IPlayerBackPack}}()\ \{\}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ Push\_back(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_harvest}{Harvest}}\&\ harvest)\ =\ 0;\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//>\ метод\ для\ добавления\ плода\ в\ рюкзак}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ std::unique\_ptr<Harvest>\ GetFruit(\textcolor{keyword}{const}\ std::string\&\ fruit)\ =\ 0;\textcolor{comment}{//>\ метод\ для\ извлечения\ плода\ из\ рюкзака}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_i_player_garden}{IPlayerGarden}}\ :\ \mbox{\hyperlink{class_i_game}{IGame}}}
+\DoxyCodeLine{00060\ \{}
+\DoxyCodeLine{00061\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00062\ \ \ \ \ \mbox{\hyperlink{class_i_player_garden}{IPlayerGarden}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_i_player_garden}{\string~IPlayerGarden}}()\ \{\};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_plants}{Plants}}*\ operator[](\textcolor{keywordtype}{size\_t}\ index)\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//>\ метод\ для\ получения\ указателя\ на\ дерево\ без\ его\ удаления}}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_harvest}{Harvest}}\ GetHarvest(\textcolor{keyword}{const}\ std::string\&\ nameOfTree)\ =\ 0;\ \ \ \textcolor{comment}{//>\ метод\ для\ получения\ объекта\ класса\ Harvest,\ при\ этом\ количество\ плодов\ на\ дереве\ уменьшается}}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ ShowStatistic()\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//>\ метод\ выводящий\ на\ экран\ статистику\ по\ содержимому\ сада}}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
