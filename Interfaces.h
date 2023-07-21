@@ -14,7 +14,7 @@ public:
 /*!
 \brief класс IGameBackPack, имеющий методы для взаимодействия игры с классом Garden
 */
-class IGameGarden : IGame
+class IGameGarden : public IGame
 {
 public:
 	IGameGarden() = default;
@@ -30,7 +30,7 @@ public:
 /*!
 \brief класс IGameBackPack, имеющий методы для взаимодействия игры с классом Backpack
 */
-class IGameBackPack : IGame
+class IGameBackPack : public IGame
 {
 public: 
 	IGameBackPack() = default;
@@ -43,7 +43,7 @@ public:
 /*!
 \brief класс IPlayerBackPack, имеющий методы для взаимодействия игрока с классом Backpack
 */
-class IPlayerBackPack : IGame
+class IPlayerBackPack : public IGame
 {
 public:
 	IPlayerBackPack() = default;
@@ -56,7 +56,7 @@ public:
 /*!
 \brief класс IPlayerGarden, имеющий методы для взаимодействия игрока с классом Garden
 */
-class IPlayerGarden : IGame
+class IPlayerGarden : public IGame
 {
 public:
 	IPlayerGarden() = default;
