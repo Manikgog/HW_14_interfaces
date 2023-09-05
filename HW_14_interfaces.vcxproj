@@ -133,15 +133,28 @@
   <ItemGroup>
     <ClInclude Include="Apple.hpp" />
     <ClInclude Include="AppleTree.hpp" />
+    <ClInclude Include="AspenBoll.hpp" />
+    <ClInclude Include="AspenTree.hpp" />
     <ClInclude Include="Backpack.hpp" />
+    <ClInclude Include="BirchTree.hpp" />
+    <ClInclude Include="Brunka.hpp" />
     <ClInclude Include="Cherry.hpp" />
     <ClInclude Include="CherryTree.hpp" />
+    <ClInclude Include="Cone.hpp" />
+    <ClInclude Include="FirTree.hpp" />
+    <ClInclude Include="ForestBuilder.hpp" />
+    <ClInclude Include="ForestConstructor.hpp" />
     <ClInclude Include="Garden.hpp" />
     <ClInclude Include="Harvest.hpp" />
     <ClInclude Include="Interfaces.h" />
     <ClInclude Include="Peach.hpp" />
     <ClInclude Include="PeachTree.hpp" />
+    <ClInclude Include="PineCone.hpp" />
+    <ClInclude Include="PineTree.hpp" />
     <ClInclude Include="Plants.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

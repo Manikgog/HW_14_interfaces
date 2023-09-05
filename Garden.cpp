@@ -7,9 +7,9 @@
 */
 Garden::Garden()
 {
-	std::random_device rd;   // non-deterministic generator
+	//std::random_device rd;   // non-deterministic generator
 
-	int AllTress = rd() % 71 + 30;;
+	/*int AllTress = rd() % 71 + 30;;
 	int numberOfAppleTrees = rd() % 30 + 10;
 	int numberOfPeachTrees = rd() % 30 + 10;
 	int numberOfCherryTrees = AllTress - numberOfAppleTrees - numberOfPeachTrees;
@@ -31,7 +31,7 @@ Garden::Garden()
 	{
 		fruitCount = rd() % 51 + 10;
 		Garden_.push_back(std::make_unique<CherryTree>("Dark green", "Medium", "Cherry Tree", fruitCount));
-	}
+	}*/
 }
 
 void Garden::PrintGarden()
@@ -107,6 +107,35 @@ void  Garden::AddCherryTree()
 	std::mt19937 gen(rd());  // to seed mersenne twister.
 	size_t fruitCount = gen() % 51 + 10;
 	Garden_.push_back(std::make_unique<CherryTree>("Dark green", "Medium", "Cherry Tree", fruitCount));
+}
+
+void Garden::AddAspenTree()
+{
+	std::random_device rd;   // non-deterministic generator
+	std::mt19937 gen(rd());  // to seed mersenne twister.
+	size_t fruitCount = gen() % 51 + 10;
+	Garden_.push_back(std::make_unique<AspenTree>("Dark green", "Large", "Aspen Tree", fruitCount));
+}
+
+void Garden::AddBirchTree() {
+	std::random_device rd;   // non-deterministic generator
+	std::mt19937 gen(rd());  // to seed mersenne twister.
+	size_t fruitCount = gen() % 51 + 10;
+	Garden_.push_back(std::make_unique<BirchTree>("Dark green", "Large", "Birch Tree", fruitCount));
+}
+
+void Garden::AddPineConeTree() {
+	std::random_device rd;   // non-deterministic generator
+	std::mt19937 gen(rd());  // to seed mersenne twister.
+	size_t fruitCount = gen() % 51 + 10;
+	Garden_.push_back(std::make_unique<PineTree>("Dark green", "Large", "Pine Tree", fruitCount));
+}
+
+void Garden::AddFirTree() {
+	std::random_device rd;   // non-deterministic generator
+	std::mt19937 gen(rd());  // to seed mersenne twister.
+	size_t fruitCount = gen() % 51 + 10;
+	Garden_.push_back(std::make_unique<FirTree>("Dark green", "Large", "Fir Tree", fruitCount));
 }
 
 void  Garden::AddRandomTree()

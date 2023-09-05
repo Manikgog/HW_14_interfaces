@@ -16,50 +16,51 @@
 #include "AppleTree.hpp"
 #include "PeachTree.hpp"
 #include "CherryTree.hpp"
+#include "FirTree.hpp"
+#include "AspenTree.hpp"
+#include "BirchTree.hpp"
+#include "PineTree.hpp"
+#include "ForestConstructor.hpp"
+#include "ForestBuilder.hpp"
 #include "Garden.hpp"
 #include "Backpack.hpp"
 #include "Interfaces.h"
 
 
 int main() {
-    Garden garden;
+    ForestBuilder* gardenBuilder;
 
-    garden.PrintGarden();
-    std::cout << "In the garden " << garden.Size() << " trees, and " << garden.AmountOfHarvest() << " harvests.\n";
-    Backpack backpack;
-    for (size_t i = 0; i < garden.Size(); i++)
-    {
-        while (garden[i]->GetFruitCount() > 0)
-        {
-            backpack.Push_back(*(garden[i]->harvestFruit())); //> добавление объекта класса Harvest в объект класса Backpack (рюкзак)
-        }
-    }
-    std::cout << "In the backpack " << backpack.Size() << " harvests." << " Total weight - " << backpack.GetWeight() << " kg.\n";
+    ForestConstructor* forestConstructor = new ForestConstructor();
 
-    Harvest apple(*(backpack.GetFruit("Apple").release())); //> извлечение яблока из рюкзака
-    std::cout << "In the backpack " << backpack.Size() << " harvests." << " Total weight - " << backpack.GetWeight() << " kg.\n";
-    Harvest peach(*(backpack.GetFruit("Peach Prince").release())); //> извледение персика из рюкзака
-    std::cout << "In the backpack " << backpack.Size() << " harvests." << " Total weight - " << backpack.GetWeight() << " kg.\n";
-    Harvest cherry(*(backpack.GetFruit("Cherry").release()));       //> извелечение черешни из рюкзака
-    std::cout << "In the backpack " << backpack.Size() << " harvests." << " Total weight - " << backpack.GetWeight() << " kg.\n";
+    gardenBuilder = new GardenBuilder();
 
-    garden.AddRandomTree();
+    forestConstructor->Construct(gardenBuilder);
 
-    garden.DeleteTree("Apple Tree");
-    garden.DeleteTree("Peach Tree");
-    garden.DeleteTree("Cherry Tree");
+    gardenBuilder->GetGarden()->PrintGarden();
 
-    Harvest h = garden.GetHarvest("Apple Tree");
+    delete gardenBuilder;
 
-    Harvest* p_h = backpack[0];
+    ForestBuilder* forestBuilder;
 
-    backpack.ShowStatistic();
+    forestBuilder = new ConiferousForest();
 
-    
-    backpack.Push_back(Harvest("Apple", "Red", "Medium", 0.2));
-    std::unique_ptr<Harvest> p_apple = backpack.GetFruit("Apple");
+    forestConstructor->Construct(forestBuilder);
 
-    garden.ShowStatistic();
+    forestBuilder->GetGarden()->PrintGarden();
+
+    delete forestBuilder;
+
+    forestBuilder = new DeciduousForest();
+
+    forestConstructor->Construct(forestBuilder);
+
+    forestBuilder->GetGarden()->PrintGarden();
+
+    delete forestBuilder;
+
+    delete forestConstructor;
+
+
     return 0;
 }
 

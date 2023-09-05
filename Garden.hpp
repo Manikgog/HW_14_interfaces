@@ -10,6 +10,10 @@
 #include "AppleTree.hpp"
 #include "PeachTree.hpp"
 #include "CherryTree.hpp"
+#include "FirTree.hpp"
+#include "AspenTree.hpp"
+#include "BirchTree.hpp"
+#include "PineTree.hpp"
 #include "Interfaces.h"
 
 /*!
@@ -39,6 +43,15 @@ public:
 	void AddPeachTree()override;
 
 	void AddCherryTree()override;
+
+	void AddAspenTree()override;
+
+	void AddBirchTree() override;
+
+	void AddPineConeTree() override;
+
+	void AddFirTree() override;
+
 
 	void AddRandomTree()override;
 

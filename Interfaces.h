@@ -14,7 +14,7 @@ public:
 /*!
 \brief класс IGameBackPack, имеющий методы для взаимодействия игры с классом Garden
 */
-class IGameGarden : IGame
+class IGameGarden : public IGame
 {
 public:
 	IGameGarden() = default;
@@ -22,6 +22,10 @@ public:
 	virtual void AddAppleTree() = 0;
 	virtual void AddPeachTree() = 0;
 	virtual void AddCherryTree() = 0;
+	virtual void AddAspenTree() = 0;
+	virtual void AddBirchTree() = 0;
+	virtual void AddPineConeTree() = 0;
+	virtual void AddFirTree() = 0;
 	virtual void AddRandomTree() = 0;
 	virtual void  DeleteTree(std::string nameTree) = 0;
 
@@ -30,7 +34,7 @@ public:
 /*!
 \brief класс IGameBackPack, имеющий методы для взаимодействия игры с классом Backpack
 */
-class IGameBackPack : IGame
+class IGameBackPack : public IGame
 {
 public: 
 	IGameBackPack() = default;
@@ -43,7 +47,7 @@ public:
 /*!
 \brief класс IPlayerBackPack, имеющий методы для взаимодействия игрока с классом Backpack
 */
-class IPlayerBackPack : IGame
+class IPlayerBackPack : public IGame
 {
 public:
 	IPlayerBackPack() = default;
@@ -56,7 +60,7 @@ public:
 /*!
 \brief класс IPlayerGarden, имеющий методы для взаимодействия игрока с классом Garden
 */
-class IPlayerGarden : IGame
+class IPlayerGarden : public IGame
 {
 public:
 	IPlayerGarden() = default;

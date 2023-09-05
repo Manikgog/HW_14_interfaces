@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ForestBuilder" Collapsed="true">
+    <Position X="24.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAoAAAAAAAAAAAABQAAAAQAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ForestBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GardenBuilder" Collapsed="true">
+    <Position X="22.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>ForestBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConiferousForest" Collapsed="true">
+    <Position X="24.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAQAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>ForestBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeciduousForest" Collapsed="true">
+    <Position X="26.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAQAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ForestBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Apple" Collapsed="true">
+    <Position X="9.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Apple.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppleTree" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABEQAAgAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppleTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Backpack" Collapsed="true">
+    <Position X="6.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAECAAAhQAAAAAAAAAAIAEAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Backpack.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cherry" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cherry.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CherryTree" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAgAAAAAABEQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CherryTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Garden" Collapsed="true">
+    <Position X="1.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgABCAAAAQgAAAAAAIAAIAAAFEADAAAAgFBACAAQA=</HashCode>
+      <FileName>Garden.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Harvest" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAQAgAAAAAAABABAAgAACAABAEgAAAIAA=</HashCode>
+      <FileName>Harvest.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGame" Collapsed="true">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Interfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGameGarden" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAQAAAAAAAIAAAAAAAAABQAAAgFAACAAQA=</HashCode>
+      <FileName>Interfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IGameBackPack" Collapsed="true">
+    <Position X="7.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAEAEAAAAAAAAABAAAgAA=</HashCode>
+      <FileName>Interfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlayerBackPack" Collapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAiAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IPlayerGarden" Collapsed="true">
+    <Position X="2.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAQAAAAAAAAAAAAAkAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Interfaces.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Peach" Collapsed="true">
+    <Position X="12" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Peach.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PeachTree" Collapsed="true">
+    <Position X="12" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABEQAAAAQAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PeachTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plants" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAwAAAAAAAAQACAAQAAAABAAAAAAACAAAAAAAAAJQA=</HashCode>
+      <FileName>Plants.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FirTree" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABEQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>FirTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cone" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cone.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PineTree" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAAAABEQAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PineTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PineCone" Collapsed="true">
+    <Position X="14.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>PineCone.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BirchTree" Collapsed="true">
+    <Position X="14.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABEQAAAAQAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BirchTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Brunka" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brunka.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AspenTree" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAABEQAAAAQAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>AspenTree.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boll" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AspenBoll.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ForestConstructor" Collapsed="true">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAIAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ForestConstructor.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
