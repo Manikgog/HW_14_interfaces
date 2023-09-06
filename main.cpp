@@ -1,17 +1,4 @@
-﻿/*!
-Наследование - Интерфейсы
-Задание на композицию
-Для реализованных классов Локация и Рюкзак создать интерфейсы:
-Локация:
-Для игры - позволяет добавлять и удалять деревья с локации
-Для игрока - позволяет просматривать деревья и собирать с них плоды
-Рюкзак:
-Для игрока - позволяет добавлять и удалять плоды из рюкзака
-Для игры - только просматривать содержимое без изменений
-Продемонстрировать различное поведение объектов класса при передаче их по разным
-интерфейсам.
-``` задание сдаётся в виде архива проекта либо ссылки на репозиторий
-*/
+﻿
 #include <iostream>
 #include "AppleTree.hpp"
 #include "PeachTree.hpp"
@@ -30,33 +17,31 @@
 int main() {
     ForestBuilder* gardenBuilder;
 
-    ForestConstructor* forestConstructor = new ForestConstructor();
+    ForestConstructor* forestConstructor = new ForestConstructor(); // создаём указатель на объект директора
 
-    gardenBuilder = new GardenBuilder();
+    gardenBuilder = new GardenBuilder();        // создаём указатель на строителя, который создаёт сад фруктовых деревьев
 
-    forestConstructor->Construct(gardenBuilder);
+    forestConstructor->Construct(gardenBuilder);    // создаём фруктовый сад
 
-    gardenBuilder->GetGarden()->PrintGarden();
+    gardenBuilder->GetGarden()->PrintGarden();      // выводим на экран список деревьев сада
 
     delete gardenBuilder;
 
-    ForestBuilder* forestBuilder;
+    gardenBuilder = new ConiferousForest();         // создаём указатель на строителя, который создаёт лес хвойных деревьев
 
-    forestBuilder = new ConiferousForest();
+    forestConstructor->Construct(gardenBuilder);     // создаём лес
 
-    forestConstructor->Construct(forestBuilder);
+    gardenBuilder->GetGarden()->PrintGarden();       // выводим на экран список деревьев хвойного леса
 
-    forestBuilder->GetGarden()->PrintGarden();
+    delete gardenBuilder;
 
-    delete forestBuilder;
+    gardenBuilder = new DeciduousForest();          // создаём указатель на строителя, который создаёт лес лиственных деревьев
 
-    forestBuilder = new DeciduousForest();
+    forestConstructor->Construct(gardenBuilder);    // создаём лес
 
-    forestConstructor->Construct(forestBuilder);
+    gardenBuilder->GetGarden()->PrintGarden();      // выводим на экран список деревьев лиственного леса
 
-    forestBuilder->GetGarden()->PrintGarden();
-
-    delete forestBuilder;
+    delete gardenBuilder;
 
     delete forestConstructor;
 
